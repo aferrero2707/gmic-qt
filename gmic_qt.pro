@@ -56,10 +56,13 @@ PKGCONFIG += fftw3 zlib libpng libcurl
 equals( HOST, "gimp" ) {
   PKGCONFIG += gimp-2.0
 }
+equals( HOST, "gimp-2.99" ) {
+  PKGCONFIG += gimp-3.0
+}
 
 DEFINES += cimg_use_cpp11=1
 DEFINES += cimg_use_fftw3 cimg_use_zlib
-DEFINES += gmic_build cimg_use_abort gmic_is_parallel cimg_use_curl cimg_use_png
+DEFINES += gmic_build cimg_use_abort gmic_is_parallel cimg_use__curl cimg_use_png
 DEFINES += cimg_appname="\\\"gmic\\\""
 
 equals(TIMING, "on") {
